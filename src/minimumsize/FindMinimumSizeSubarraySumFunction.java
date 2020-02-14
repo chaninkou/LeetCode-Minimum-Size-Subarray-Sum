@@ -17,6 +17,7 @@ public class FindMinimumSizeSubarraySumFunction {
 		int min = Integer.MAX_VALUE;
 
 		while (end < nums.length) {
+			// Keep adding until the sum is s or greater
 			sum += nums[end];
 			end++;
 
