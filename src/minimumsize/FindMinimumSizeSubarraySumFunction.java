@@ -20,6 +20,9 @@ public class FindMinimumSizeSubarraySumFunction {
 		// move end pointer until we find a sum of s or greater
 		while (end < nums.length) {
 			sum += nums[end];
+			
+			// Because of this, end is always an element bigger than start
+			// That's why end - from will at least get 1
 			end++;
 
 			// Once we find it, get the length and compare to the min, move the from pointer now
@@ -30,6 +33,23 @@ public class FindMinimumSizeSubarraySumFunction {
 				from++;
 			}
 		}
+		
+		// Same thing, but this doesn't use math.min
+		// end - from + 1 because it did not end++ before while loop
+//        while (end < nums.length)
+//        {
+//            sum += nums[end];
+//            while (sum >= s)
+//            {
+//                if (end - from + 1 < min)
+//                {
+//                	min = end - from + 1;
+//                }
+//                sum -= nums[from];
+//                from++;
+//            }
+//            end++;
+//        }
 
 		// If min == max_value, which mean the sum don't add up the the target
 		// edge case if min does add up to max_value, use a boolean instead
