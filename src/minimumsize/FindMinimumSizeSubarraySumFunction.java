@@ -7,14 +7,11 @@ public class FindMinimumSizeSubarraySumFunction {
 			return 0;
 		}
 
-		// We will start from 0 index
 		int from = 0;
 		int end = 0;
 
-		// Sum will be 0 at first
 		int sum = 0;
 
-		// We do max_value since any number will be the smallest
 		int min = Integer.MAX_VALUE;
 
 		// move end pointer until we find a sum of s or greater
@@ -25,7 +22,7 @@ public class FindMinimumSizeSubarraySumFunction {
 			// That's why end - from will at least get 1
 			end++;
 
-			// Once we find it, get the length and compare to the min, move the from pointer now
+			// Move from's pointer to get the min of the window
 			while (sum >= s) {
 				min = Math.min(min, end - from);
 
