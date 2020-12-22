@@ -1,4 +1,4 @@
-package minimumsize;
+package leetcode209;
 
 public class FindMinimumSizeSubarraySumFunction {
 	// Sliding window methods, o(N) since end and from pointers will move n times = O(N + N) worst case 
