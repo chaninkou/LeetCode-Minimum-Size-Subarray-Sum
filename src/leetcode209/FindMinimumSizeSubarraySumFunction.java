@@ -1,7 +1,8 @@
 package leetcode209;
 
 public class FindMinimumSizeSubarraySumFunction {
-	// Sliding window methods, o(N) since end and from pointers will move n times = O(N + N) worst case 
+	// Sliding window methods, o(N) 
+	// since end and from pointers will move n times = O(N + N) worst case 
 	public int minSubArrayLen(int s, int[] nums) {
 		if (nums == null || nums.length == 0) {
 			return 0;
